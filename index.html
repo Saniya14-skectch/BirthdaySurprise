@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="hearts"></div>
+
+<!-- LOGIN PAGE -->
+
+<section id="loginPage" class="page active">
+
+    <div class="card">
+
+        <h1>🎂 Birthday Surprise Vault</h1>
+
+        <p class="subtitle">
+            Only TWO very special people can enter...
+        </p>
+
+        <input
+            type="password"
+            id="passcode"
+            placeholder="Enter Secret Passcode">
+
+        <button onclick="checkPasscode()">
+            Unlock ❤️
+        </button>
+
+        <p id="error"></p>
+
+    </div>
+
+</section>
+
+
+
+<!-- HAPPY BIRTHDAY PAGE -->
+
+<section id="welcomePage" class="page">
+
+    <div class="card">
+
+        <h1 id="welcomeTitle"></h1>
+
+        <p id="welcomeText"></p>
+
+        <button onclick="showCake()">
+            Continue 🎉
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- CAKE PAGE -->
+
+<section id="cakePage" class="page">
+
+    <div class="card">
+
+        <h1>🎂 Make A Wish!</h1>
+
+        <p>
+            Click the button below to blow out the candles.
+        </p>
+
+        <img
+            id="cakeImage"
+            src="images/cake-on.png"
+            class="cake">
+
+        <br>
+
+        <button onclick="blowCandles()">
+            💨 Blow Candles
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- GIFTS PAGE -->
+
+<section id="giftPage" class="page">
+
+    <div class="card">
+
+        <h1>🎁 Your Gifts</h1>
+
+        <p>Click a gift ❤️</p>
+
+        <div class="giftContainer">
+
+            <div class="gift" onclick="openGift(1)">
+                🎁
+            </div>
+
+            <div class="gift" onclick="openGift(2)">
+                🎁
+            </div>
+
+            <div class="gift" onclick="openGift(3)">
+                🎁
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- GIFT POPUP -->
+
+<div id="popup" class="popup">
+
+    <div class="letter">
+
+        <span class="close" onclick="closePopup()">
+            ✖
+        </span>
+
+
+        <div class="seal">
+            ❤️
+        </div>
+
+
+        <h2 id="popupTitle"></h2>
+
+
+        <img
+        id="popupImage"
+        src="">
+
+
+        <p id="popupMessage"></p>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- FINAL LETTER -->
+
+<section id="letterPage" class="page">
+
+    <div class="card">
+
+        <h1>❤️ One Last Thing...</h1>
+
+        <p id="finalLetter"></p>
+
+        <button onclick="celebrate()">
+            Celebrate 🎉
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,849 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+
+    background-image:
+    url("images/background.png");
+
+
+    background-size:
+    350px;
+
+
+    background-repeat:
+    repeat;
+
+
+    background-color:#f5e6d3;
+
+
+    transition:1s;
+
+}
+
+
+/* THEMES */
+
+body.red{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ff758f,
+        #ffb3c6,
+        #ffe5ec
+    );
+
+}
+
+
+body.purple{
+
+    background:
+    linear-gradient(
+        135deg,
+        #cdb4db,
+        #ffc8dd,
+        #bde0fe
+    );
+
+}
+
+
+
+/* Floating background */
+
+.hearts::before{
+
+    content:"♡  ✦  ♡  ✧  ♡  ✦  ♡";
+
+    position:absolute;
+
+    width:100%;
+
+    top:100%;
+
+    font-size:35px;
+
+    color:white;
+
+    opacity:.7;
+
+    animation:float 15s infinite linear;
+
+}
+
+
+
+@keyframes float{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-150vh);
+    }
+
+}
+
+
+
+/* PAGE */
+
+.page{
+
+    display:none;
+
+    width:100%;
+
+    height:100%;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.page.active{
+
+    display:flex;
+
+}
+
+
+
+/* GLASS CARD */
+
+.card{
+
+    width:90%;
+
+    max-width:650px;
+
+
+    padding:45px;
+
+
+    background:
+
+    rgba(255,255,255,.25);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-radius:35px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.5);
+
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.15);
+
+
+    text-align:center;
+
+
+    animation:appear .8s ease;
+
+}
+
+
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+h1{
+
+    color:black;
+
+    font-size:40px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+    0 4px 10px rgba(0,0,0,.2);
+
+}
+
+
+
+p{
+
+    color:black;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+/* INPUT */
+
+input{
+
+    width:85%;
+
+    padding:18px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    margin:25px 0;
+
+
+    text-align:center;
+
+
+    font-size:17px;
+
+
+    background:white;
+
+
+    outline:none;
+
+}
+
+
+
+
+/* BUTTON */
+
+
+button{
+
+    padding:15px 35px;
+
+
+    border:none;
+
+
+    border-radius:50px;
+
+
+    background:#f8b6c8;
+
+
+    color:#7a4a4a;
+
+
+    font-size:18px;
+
+
+    font-weight:bold;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 10px 20px rgba(0,0,0,.15);
+
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+
+    transform:translateY(-5px) scale(1.05);
+
+}
+
+
+
+
+/* CAKE */
+
+.cake{
+
+
+    width:250px;
+
+
+    margin:20px;
+
+
+    filter:
+
+    drop-shadow(
+
+    0 10px 15px rgba(0,0,0,.2)
+
+    );
+
+}
+
+
+
+
+/* GIFTS */
+
+
+.giftContainer{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:40px;
+
+
+    margin-top:30px;
+
+}
+
+
+
+.gift{
+
+
+    font-size:75px;
+
+
+    cursor:pointer;
+
+
+    animation:bounce 2s infinite;
+
+
+}
+
+
+
+.gift:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+
+.gift:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+
+
+
+@keyframes bounce{
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+
+/* POPUP */
+
+
+.popup{
+
+
+    display:none;
+
+
+    position:fixed;
+
+
+    inset:0;
+
+
+    background:rgba(0,0,0,.5);
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+}
+
+
+
+.popupContent{
+
+
+    background:white;
+
+
+    padding:30px;
+
+
+    border-radius:30px;
+
+
+    width:85%;
+
+
+    max-width:500px;
+
+
+    text-align:center;
+
+
+    animation:pop .5s;
+
+}
+
+
+
+@keyframes pop{
+
+
+    from{
+
+        transform:scale(.5);
+
+    }
+
+
+    to{
+
+        transform:scale(1);
+
+    }
+
+}
+
+
+
+.popupContent img{
+
+
+    width:250px;
+
+
+    height:250px;
+
+
+    object-fit:cover;
+
+
+    border-radius:25px;
+
+
+}
+
+
+
+.popupContent h2{
+
+
+    color:#ff5d8f;
+
+
+    margin:20px;
+
+}
+
+
+
+.popupContent p{
+
+
+    color:#555;
+
+}
+
+
+
+.close{
+
+
+    float:right;
+
+
+    font-size:25px;
+
+
+    cursor:pointer;
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+
+    .gift{
+
+        font-size:55px;
+
+    }
+
+
+}
+/* =========================
+   VINTAGE LETTER POPUP
+========================= */
+
+
+.letter{
+
+    width:85%;
+
+    max-width:550px;
+
+    min-height:450px;
+
+    padding:45px 35px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #fff1d6,
+        #f6dfb8
+    );
+
+
+    position:relative;
+
+
+    text-align:center;
+
+
+    border-radius:5px;
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,.35);
+
+
+    animation:letterOpen .7s ease;
+
+
+
+    /* torn paper effect */
+
+    clip-path:polygon(
+        0 3%,
+        5% 0,
+        12% 3%,
+        20% 1%,
+        30% 3%,
+        40% 0,
+        55% 2%,
+        70% 0,
+        85% 3%,
+        100% 1%,
+        98% 97%,
+        85% 100%,
+        70% 97%,
+        55% 100%,
+        40% 98%,
+        25% 100%,
+        10% 97%,
+        0 100%
+    );
+
+}
+
+
+
+@keyframes letterOpen{
+
+
+    from{
+
+        transform:
+
+        scale(.3)
+
+        rotate(-10deg);
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        transform:
+
+        scale(1)
+
+        rotate(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+.letter h2{
+
+
+    color:#8b5e34;
+
+    font-family:
+
+    "Georgia", serif;
+
+
+    font-size:30px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.letter p{
+
+
+    color:#5b4636;
+
+
+    font-family:
+
+    "Georgia", serif;
+
+
+    font-size:18px;
+
+
+    line-height:1.8;
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+.letter img{
+
+
+    width:220px;
+
+
+    height:220px;
+
+
+    object-fit:cover;
+
+
+    border-radius:10px;
+
+
+    border:8px solid #fff;
+
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.2);
+
+
+}
+
+
+
+/* Coffee stain effect */
+
+
+.letter::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:120px;
+
+    height:120px;
+
+
+    background:
+
+    rgba(139,94,52,.12);
+
+
+    border-radius:50%;
+
+
+    top:30px;
+
+
+    left:30px;
+
+
+}
+
+
+
+.letter::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:100px;
+
+    height:100px;
+
+
+    background:
+
+    rgba(139,94,52,.10);
+
+
+    border-radius:50%;
+
+
+    bottom:40px;
+
+
+    right:40px;
+
+
+}
+
+
+
+.seal{
+
+
+    position:absolute;
+
+
+    top:-25px;
+
+
+    right:30px;
+
+
+    width:65px;
+
+    height:65px;
+
+
+    background:#b23a48;
+
+
+    color:white;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    font-size:25px;
+
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,.3);
+
+
+}
+
+
+
+.letter .close{
+
+
+    position:absolute;
+
+
+    right:25px;
+
+    top:20px;
+
+
+    color:#8b5e34;
+
+}
